@@ -22,6 +22,7 @@ public class DaKaTiShi extends TimerTask {
 	private Label login_clew=new Label();
 	private static String aMorningDate="2019-04-18 08:20:00";
 	private static String aNightDate="2019-04-18 19:00:00";
+	private static String aNightDate2="2019-04-18 19:15:00";
 	
 	private static SimpleDateFormat a=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	
@@ -59,17 +60,20 @@ public class DaKaTiShi extends TimerTask {
 	public static void main(String[] args) {
 		Date b = null;
 		Date d = null;
+		Date e = null;
 		try {
 			b = a.parse(aMorningDate);
 			d = a.parse(aNightDate);
+			e = a.parse(aNightDate2);
 		} catch (ParseException e1) {
 			e1.printStackTrace();
 		}
 		Timer aTimer=new Timer();
-		Timer aTimer2=new Timer(); 
 		DaKaTiShi aDaKaTiShi=new DaKaTiShi();
 		DaKaTiShi aDaKaTiShi2=new DaKaTiShi();
+		DaKaTiShi aDaKaTiShi3=new DaKaTiShi();
 		aTimer.schedule(aDaKaTiShi,b,daySpan);
-		aTimer2.schedule(aDaKaTiShi2, d,daySpan);
+		aTimer.schedule(aDaKaTiShi2, d,daySpan);
+		aTimer.schedule(aDaKaTiShi3,e,daySpan);
 	}
 }
