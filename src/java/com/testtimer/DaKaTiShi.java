@@ -50,6 +50,7 @@ public class DaKaTiShi extends TimerTask {
 		login_clew.setSize(230, 30);
 	    login_clew.setText("Don't forget to punch in even after work.");
 	    aFrame.add(login_clew);
+	    login_clew.getText();
 	    DaKaTiShiActionListener aDaKaTiShiActionListener=new DaKaTiShiActionListener();
 		login.addActionListener(aDaKaTiShiActionListener);
 	}
